@@ -1,5 +1,5 @@
-from django.shortcuts import render
 from __future__ import unicode_literals
+from django.shortcuts import render
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
@@ -13,8 +13,10 @@ from django.views.generic import TemplateView
 
 # Create your views here.
 
-def index_view:
+def index_view(request):
     template = loader.get_template('index.html')
     return HttpResponse(template.render())
 
-def details_view:
+def details_view(request):
+    template = loader.get_template('index.html')
+    return HttpResponse(template.render())
