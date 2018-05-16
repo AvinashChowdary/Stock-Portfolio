@@ -20,7 +20,7 @@
                 <div class="calculate-side">
                     <h1 class='lead-title'><center>Stock Portfolio</center></h1>
                     <!-- Form  -->
-                    <form method="POST" action="report" class='calculate-side-form'>
+                    <form method="POST" action="/details/" class='calculate-side-form'>
                         
                         <div class="md-form ">
                             <input type="number" id="amount" name="amount" class="form-control">
@@ -33,25 +33,25 @@
                                 
                                 <span class="bigcheck" >
                                     <label class="bigcheck" style="box-shadow: 0 0 1px #4c4c4c;">Ethical Investing
-                                        <input type="checkbox" class="bigcheck form-control" name="investment_choices" value="Ethical Investing" id="ic_1"/>
+                                        <input type="checkbox" class="bigcheck form-control" name="ethical_investing" value="Ethical Investing" id="ic_1"/>
                                     </label>
                                 </span>
                                 
                                 <span class="bigcheck">
                                     <label class="bigcheck" style="box-shadow: 0 0 1px #4c4c4c;">Growth Investing
-                                        <input type="checkbox" class="bigcheck form-control" name="investment_choices" value="Growth Investing" id="ic_2"/>
+                                        <input type="checkbox" class="bigcheck form-control" name="growth_investing" value="Growth Investing" id="ic_2"/>
                                     </label>
                                 </span>
                                 
                                 <span class="bigcheck">
                                     <label class="bigcheck" style="box-shadow: 0 0 1px #4c4c4c;">Index Investing
-                                        <input type="checkbox" class="bigcheck form-control" name="investment_choices" value="Index Investing" id="ic_3"/>
+                                        <input type="checkbox" class="bigcheck form-control" name="index_investing" value="Index Investing" id="ic_3"/>
                                     </label>
                                 </span>
                                 
                                 <span class="bigcheck">
                                     <label class="bigcheck" style="box-shadow: 0 0 1px #4c4c4c;">Quality Investing
-                                        <input type="checkbox" class="bigcheck form-control" name="investment_choices" value="Quality Investing" id="ic_4"/>
+                                        <input type="checkbox" class="bigcheck form-control" name="quality_investing" value="Quality Investing" id="ic_4"/>
                                     </label>
                                 </span>
                                 
@@ -62,46 +62,23 @@
 
                                 <span class="bigcheck">
                                     <label class="bigcheck" style="box-shadow: 0 0 1px #4c4c4c;">Value Investing
-                                        <input type="checkbox" class="bigcheck form-control" name="investment_choices" value="Value Investing" id="ic_5"/>
+                                        <input type="checkbox" class="bigcheck form-control" name="value_investing" value="Value Investing" id="ic_5"/>
                                     </label>
                                 </span>
                                 
                         </div>
                         
                         <div class="text-center">
-                            <button type="submit" class="btn btn-info submit_btn">Generate Report</button>
+                            <button type="submit" class="btn btn-info submit_btn">Get Investing Plans</button>
                         </div>
                     </form>
                 </div>
                 
             </div>
             
-            
-            
         </div>
     </div>
     
-    
-    <!-- Modal for form error checking. -->
-    <div class="modal fade" id="formErrorModal" tabindex="-1" role="dialog" aria-labelledby="formErrorModal" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="formErrorModal">We have a problem !</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body"></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
