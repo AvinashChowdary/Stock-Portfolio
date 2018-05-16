@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-    <title>Stock Portfolio Manager</title>
+    <title>Stock Portfolio</title>
 </head>
 <body>
     
@@ -27,49 +27,51 @@
                             <label for="amount">I want to invest ($)</label>
                         </div>
                         
-                        <div class="md-form pos-form">
+                        <div class="md-form pos-form" style="width:800px; margin:0 auto;">
                             
                             <div class="investment_choices_area clearfix">
                                 
-                                <label for="ic_1">
-                                    <img src="{% static 'images/1.png' %}" alt="">
-                                    <span>Ethical Investing</span>
-                                    <input type="checkbox" value="Ethical Investing" id="ic_1" name="investment_choices" class="form-control">
-                                </label>
+                                <span class="bigcheck" >
+                                    <label class="bigcheck" style="box-shadow: 0 0 1px #4c4c4c;">Ethical Investing
+                                        <input type="checkbox" class="bigcheck form-control" name="investment_choices" value="Ethical Investing" id="ic_1"/>
+                                    </label>
+                                </span>
                                 
-                                <label for="ic_2">
-                                    <img src="{% static 'images/2.png' %}" alt="">
-                                    <span>Growth Investing</span>
-                                    <input type="checkbox" value="Growth Investing" id="ic_2" name="investment_choices" class="form-control">
-                                </label>
+                                <span class="bigcheck">
+                                    <label class="bigcheck" style="box-shadow: 0 0 1px #4c4c4c;">Growth Investing
+                                        <input type="checkbox" class="bigcheck form-control" name="investment_choices" value="Growth Investing" id="ic_2"/>
+                                    </label>
+                                </span>
                                 
+                                <span class="bigcheck">
+                                    <label class="bigcheck" style="box-shadow: 0 0 1px #4c4c4c;">Index Investing
+                                        <input type="checkbox" class="bigcheck form-control" name="investment_choices" value="Index Investing" id="ic_3"/>
+                                    </label>
+                                </span>
                                 
-                                <label for="ic_3">
-                                    <img src="{% static 'images/3.png' %}" alt="">
-                                    <span>Index Investing</span>
-                                    <input type="checkbox" value="Index Investing" id="ic_3" name="investment_choices" class="form-control">
-                                </label>
+                                <span class="bigcheck">
+                                    <label class="bigcheck" style="box-shadow: 0 0 1px #4c4c4c;">Quality Investing
+                                        <input type="checkbox" class="bigcheck form-control" name="investment_choices" value="Quality Investing" id="ic_4"/>
+                                    </label>
+                                </span>
                                 
-                                <label for="ic_4">
-                                    <img src="{% static 'images/4.png' %}" alt="">
-                                    <span>Quality Investing</span>
-                                    <input type="checkbox" value="Quality Investing" id="ic_4" name="investment_choices" class="form-control">
-                                </label>
-                                <label for="ic_5">
-                                    <img src="{% static 'images/5.png' %}" alt="">
-                                    <span>Value Investing</span>
-                                    <input type="checkbox" value="Value Investing" id="ic_5" name="investment_choices" class="form-control">
-                                </label>
-                            </div>
-                            
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+
+                                <span class="bigcheck">
+                                    <label class="bigcheck" style="box-shadow: 0 0 1px #4c4c4c;">Value Investing
+                                        <input type="checkbox" class="bigcheck form-control" name="investment_choices" value="Value Investing" id="ic_5"/>
+                                    </label>
+                                </span>
+                                
                         </div>
                         
                         <div class="text-center">
                             <button type="submit" class="btn btn-info submit_btn">Generate Report</button>
                         </div>
                     </form>
-                    <!-- End of Form  -->
-                    
                 </div>
                 
             </div>
