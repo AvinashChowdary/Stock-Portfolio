@@ -23,7 +23,7 @@ def details_view(request):
         amount = request.POST.get('amount')
         
         is_ethical_enabled = request.POST.get('ethical_investing')
-        is_growth_enabled = request.POST.get('griowth_investing')
+        is_growth_enabled = request.POST.get('growth_investing')
         is_index_enabled = request.POST.get('index_investing')
         is_quality_enabled = request.POST.get('quality_investing')
         is_value_enabled = request.POST.get('value_investing')
