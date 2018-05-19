@@ -6,29 +6,158 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <script src="{% static 'js/Chart.bundle.js' %}"></script>
     <title>Stock Details</title>
 </head>
 <body>
+    
+    
     <div class="container-contact100">
-        <p>Amount : {{ amount }}</p>
-        <br/>
-        <p>is_ethical_enabled : {{ is_ethical_enabled }}</p>
-        <br/>
-        <p>is_growth_enabled : {{ is_growth_enabled }}</p>
-        <br/>
-        <p>is_index_enabled : {{ is_index_enabled }}</p>
-        <br/>
-        <p>is_quality_enabled : {{ is_quality_enabled }}</p>
-        <br/>
-        <p>is_value_enabled : {{ is_value_enabled }}</p>
-
+        <div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
+        <div class="row">
+            <div class="page-content">
+                
+                <div class="content">
+                    
+                    <div class="col-12"> 
+                        
+                        <div class="row">
+                            <div class="col-12">
+                                
+                                {% if many_selection == False %}
+                                <h1 class='lead-title'>{{ types.0 }}</h1>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Symbol</th>
+                                            <th>Company</th>
+                                            <th>Stock Value</th>
+                                            <th>Invested Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for stock_name,stock_closing,stock_symbol,stock_value in whole_data %}
+                                        <tr>
+                                            <td>
+                                                {{ stock_symbol }}
+                                            </td>
+                                            <td>
+                                                {{ stock_name}}
+                                            </td>
+                                            <td>
+                                                ${{ stock_closing }}
+                                            </td>
+                                            <td>
+                                                ${{ stock_value }}
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% else %}
+                                
+                                <h1 class='lead-title'>{{ types.0 }}</h1>
+                                
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Symbol</th>
+                                            <th>Company</th>
+                                            <th>Stock Value</th>
+                                            <th>Invested Amount</th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody>
+                                        
+                                        {% for stock_name,stock_closing,stock_symbol,stock_value in whole_data_1 %}
+                                        <tr>
+                                            <td>
+                                                {{ stock_symbol }}
+                                            </td>
+                                            <td>
+                                                {{ stock_name}}
+                                            </td>
+                                            <td>
+                                                ${{ stock_closing }}
+                                            </td>
+                                            <td>
+                                                ${{ stock_value }}
+                                            </td>
+                                        </tr>
+                                        
+                                        {% endfor %}
+                                        
+                                    </tbody>
+                                </table>
+                                
+                                
+                                <h1 class='lead-title'>{{ types.1 }}</h1>
+                                
+                                
+                                
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Symbol</th>
+                                            <th>Company</th>
+                                            <th>Stock Value</th>
+                                            <th>Invested Amount</th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody>
+                                        
+                                        {% for stock_name,stock_closing,stock_symbol,stock_value in whole_data_2 %}
+                                        <tr>
+                                            <td>
+                                                {{ stock_symbol }}
+                                            </td>
+                                            <td>
+                                                {{ stock_name}}
+                                            </td>
+                                            <td>
+                                                ${{ stock_closing }}
+                                            </td>
+                                            <td>
+                                                ${{ stock_value }}
+                                            </td>
+                                        </tr>
+                                        
+                                        {% endfor %}
+                                        
+                                    </tbody>
+                                </table>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                    </div> 
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <div>
+            {% for graph in graphs %}
+            <div style="width:600;height:500">
+                {{ graph|safe }}
+            </div>
+            {% endfor %}
+        </div>
     </div>
-
+    
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
     
     <script src="{% static 'js/main.js' %}"></script>
+    
+    
+    
+    
 </body>
 </html>
