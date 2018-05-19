@@ -206,3 +206,17 @@ input[type='checkbox'].bigcheck + span.bigcheck-target:after {
 input[type='checkbox'].bigcheck:checked + span.bigcheck-target:after {
     content: "\f046"; /* fontawesome checked box (fa-check-square-o) */
 }
+
+.item {
+    width: 100%
+  }
+  
+  .container_graph {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .container_graph>div {
+    flex: 0 50%;
+    box-sizing:border-box
+  }

@@ -24,11 +24,11 @@ def index_view(request):
     return HttpResponse(template.render())
 
 def getStockDetails(symbol):
-    url = "https://www.alphavantage.co/query?apikey=JVBIA4MVP0BBMTIN&function=TIME_SERIES_WEEKLY_ADJUSTED&symbol="+symbol
+    url = "https://www.alphavantage.co/query?apikey=JVBIA4MVP0BBMTIN&function=TIME_SERIES_DAILY_ADJUSTED&symbol="+symbol
     response = requests.get(url)
     body = response.json()
-
-    d = body['Weekly Adjusted Time Series']
+    print(body)
+    d = body['Time Series (Daily)']
     data = []
     n=0
 
